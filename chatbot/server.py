@@ -75,6 +75,7 @@
 #     app.run(host="0.0.0.0", port=port)
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
 import pickle
 import json
@@ -85,6 +86,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app, origins=["https://bnabfrontend.onrender.com"])  # Allow only your frontend
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_FILE = os.path.join(BASE_DIR, 'model.pkl')
