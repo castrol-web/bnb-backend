@@ -1,4 +1,6 @@
-scikit-learn
 flask
+python-dotenv
+sentence-transformers
+torch
 numpy
-flask_cors
+scikit-learn
