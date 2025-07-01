@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 //cross origin middleware 
 app.use(cors({
-    origin: ["http://localhost:5173","https://bnb-gn0s.onrender.com"],
+    origin: ["http://localhost:5173","https://bnabfrontend.onrender.com"],
      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
 }));
 
