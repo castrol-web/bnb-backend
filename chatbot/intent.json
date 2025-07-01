@@ -1,0 +1,264 @@
+{
+  "intents": [
+    {
+      "tag": "greet",
+      "patterns": [
+        "hi",
+        "hello",
+        "hellow",
+        "good morning",
+        "hey there",
+        "hi there",
+        "good afternoon",
+        "good evening",
+        "yo",
+        "sup",
+        "what's up?",
+        "hey",
+        "howdy",
+        "hello friend",
+        "hiya",
+        "greetings",
+        "good day"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! Need help with visa or job info?",
+        "Greetings! What can I help you with?"
+      ]
+    },
+    {
+      "tag": "ask_visa_process",
+      "patterns": [
+        "How do I apply for a student visa?",
+        "What are the requirements for a work visa?",
+        "Tell me the visa process",
+        "visa application steps",
+        "how to get a visa",
+        "can you help with my visa?",
+        "visa eligibility criteria",
+        "how long does visa processing take?",
+        "documents needed for visa",
+        "can I extend my visa?",
+        "visa interview tips",
+        "I'm planning to apply for a visa. What should I do?",
+        "Can you explain the visa process?",
+        "How can I start my visa application?",
+        "Help me apply for a visa.",
+        "What are the first steps in getting a visa?",
+        "Can you walk me through the visa process?",
+        "How do I get a visa approved?",
+        "i need to know if i can apply for a visa",
+        "how do i apply for a visa?",
+        "what do i need when i apply for a visa?",
+        "visa help",
+        "how can i get a visa?",
+        "what steps should I follow to apply for a visa?",
+        "how to start visa process",
+        "i want to get a visa",
+        "i need a visa",
+        "i need help applying for a visa",
+        "how do i start a visa application?",
+        "what should I do to get a visa?",
+        "i want to get a visa",
+        "can you help with my visa application?",
+        "how do I apply for a visa?",
+        "visa help please",
+        "how to get started with a visa"
+      ],
+      "responses": [
+        "Sure! We assist with all visa processes. Which visa type and country are you interested in?",
+        "Visa assistance is available! Please share your destination country and visa type.",
+        "The visa process usually involves submitting an application, required documents, and sometimes attending an interview. Let me know your visa type to provide details."
+      ]
+    },
+    {
+      "tag": "ask_job_openings",
+      "patterns": [
+        "Are there jobs in Canada?",
+        "What jobs are available?",
+        "Show me current job openings",
+        "I'm looking for a job",
+        "job vacancies",
+        "any job openings?",
+        "do you help with job placement?",
+        "how to apply for jobs abroad?",
+        "what industries have vacancies?",
+        "entry-level jobs",
+        "work from home jobs",
+        "Can you help me find a job?",
+        "Any open jobs right now?",
+        "Looking for job opportunities",
+        "I want to work overseas",
+        "Is there any job I can apply for?",
+        "Send me available jobs",
+        "I'm interested in working in Europe. Any jobs?"
+      ],
+      "responses": [
+        "Yes! We have multiple job openings. What field or country are you interested in?",
+        "We can help with job placement. Please share your skills or target destination.",
+        "Our job placement services cover many industries. Tell me your area of expertise or preferred location."
+      ]
+    },
+    {
+      "tag": "ask_visa_types",
+      "patterns": [
+        "What types of visas do you support?",
+        "student visa options",
+        "work visa categories",
+        "family visa information",
+        "tourist visa details",
+        "which visa should I apply for?",
+        "long-term visa types",
+        "can I switch visa types?",
+        "Do you support travel visas?",
+        "What kind of visas do you handle?",
+        "Give me options for visa types",
+        "Do you offer help with tourist or student visas?",
+        "Help me choose a visa",
+        "Visa types you assist with?",
+        "which type of visa do you offer?",
+        "what kind of visa do you provide?",
+        "what visa options are available?",
+        "tell me about different visa types",
+        "what visas do you help with?",
+        "do you support student or tourist visa?",
+        "what is the best visa for me?",
+        "visa categories",
+        "what type of visa do you offer?",
+        "what kind of visas do you assist with?",
+        "do you offer student visas?",
+        "what visa types are available?",
+        "which visa suits me?",
+        "do you support working visas?",
+        "tell me the visa options",
+        "help me choose a visa"
+      ],
+      "responses": [
+        "We support student visas, work visas, family visas, tourist visas, and more. Let me know which one you want details about.",
+        "Different visas have different requirements. Please specify your visa interest for tailored info."
+      ]
+    },
+    {
+      "tag": "ask_job_requirements",
+      "patterns": [
+        "What are the requirements to apply for a job?",
+        "do I need work experience?",
+        "is certification necessary?",
+        "can I apply without a degree?",
+        "skills needed for jobs abroad",
+        "language requirements for jobs",
+        "work permit needed?",
+        "Do I need a degree to get a job abroad?",
+        "Are there jobs without experience?",
+        "Is IELTS required?",
+        "Tell me the job requirements for Canada",
+        "Do I qualify for jobs overseas?",
+        "Do I need a resume?",
+        "Any language exams required?"
+      ],
+      "responses": [
+        "Job requirements vary by country and industry. Generally, relevant experience and language skills help. Tell me your target job or location for specifics.",
+        "Some jobs require certifications or degrees, while others focus on skills. Let me know your field for detailed advice."
+      ]
+    },
+    {
+      "tag": "ask_processing_time",
+      "patterns": [
+        "How long does visa processing take?",
+        "job placement duration",
+        "time to get visa approval",
+        "how fast can I find a job?",
+        "average processing time",
+        "When will I get my visa?",
+        "Expected time for job placement?",
+        "How fast can I get a job?",
+        "Duration for job application approval?",
+        "Is visa processing fast?",
+        "Will I get a visa quickly?"
+      ],
+      "responses": [
+        "Visa processing time varies by country and visa type, ranging from a few weeks to months.",
+        "Job placement duration depends on your profile and job market conditions. We aim to assist you as quickly as possible."
+      ]
+    },
+    {
+      "tag": "ask_costs",
+      "patterns": [
+        "How much does visa application cost?",
+        "job placement fees",
+        "any hidden charges?",
+        "consultation fees",
+        "payment methods accepted",
+        "How much will I pay?",
+        "Do I have to pay for job placement?",
+        "Is there a consultation fee?",
+        "What does it cost to apply for a visa?",
+        "Tell me the fees",
+        "Visa cost breakdown?",
+        "Do you charge for job help?"
+      ],
+      "responses": [
+        "Visa fees vary by country and visa type. Job placement services have transparent fees which we can discuss in detail.",
+        "We do not charge hidden fees. Please contact us for a full fee breakdown and payment options."
+      ]
+    },
+    {
+      "tag": "out_of_scope",
+      "patterns": [
+        "What's the weather today?",
+        "Tell me a joke",
+        "Who won the game last night?",
+        "Do you like pizza?",
+        "random question",
+        "how old are you?",
+        "Who is the president?",
+        "What's your name?",
+        "Tell me a fun fact",
+        "What is your favorite food?",
+        "Do you play games?",
+        "How many countries are there?",
+        "Who is the best footballer?",
+        "What’s 2+2?",
+        "Can you tell me a story?",
+        "Do you love me?"
+      ],
+      "responses": [
+        "I'm here to help with visa and job-related questions!",
+        "Please ask something related to visas or job placement.",
+        "Sorry, I can't help with that. Try asking about visas or jobs."
+      ]
+    },
+    {
+      "tag": "contact_agent",
+      "patterns": [
+        "I need to speak to someone",
+        "Can I talk to a human?",
+        "This is complicated",
+        "I want to speak to support",
+        "Talk to someone real",
+        "Can I talk to an agent?",
+        "Help from a real person",
+        "I need real help",
+        "Please connect me to someone",
+        "I prefer talking to a person",
+        "Can I speak to a representative?",
+        "Can I call you?",
+        "Where can I find your contact?"
+      ],
+      "responses": [
+        "Sure! You can contact our agent directly on WhatsApp at +1234567890.",
+        "For personalized help, message our agent on WhatsApp: +1234567890."
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": [
+        "I'm not sure I understood that. Can you rephrase?",
+        "Sorry, I didn't get that. Can you ask in a different way?",
+        "Hmm, I'm a bit confused. Try asking differently?"
+      ]
+    }
+  ]
+}
