@@ -256,6 +256,7 @@ router.get('/review/:roomId', async (req, res) => {
 router.get('/rooms', async (req: Request, res: any) => {
     try {
         const rooms = await Room.find();
+        console.log(rooms)
 
         if (!rooms || rooms.length === 0) {
             return res.status(404).json({ message: "No room found!" });
@@ -288,7 +289,7 @@ router.get('/rooms', async (req: Request, res: any) => {
             })
         );
 
-        res.status(200).json(roomsWithSignedUrls);
+        res.status(201).json(roomsWithSignedUrls);
     } catch (err: any) {
         console.error('Error fetching rooms:', err);
         res.status(500).json({ error: err.message });
