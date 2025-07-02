@@ -17,6 +17,7 @@ import Reviews from "../models/Review";
 import Room from "../models/Room";
 import Review from "../models/Review";
 import Booking from "../models/Booking";
+import Gallery from "../models/Gallery";
 dotenv.config()
 const router = express.Router();
 
@@ -256,7 +257,6 @@ router.get('/review/:roomId', async (req, res) => {
 router.get('/rooms', async (req: Request, res: any) => {
     try {
         const rooms = await Room.find();
-        console.log(rooms)
 
         if (!rooms || rooms.length === 0) {
             return res.status(404).json({ message: "No room found!" });
@@ -407,6 +407,39 @@ router.post("/bookings", authMiddleware, async (req: Request, res: any) => {
     }
 });
 
+// READ ALL gallery pictures
+router.get("/gallery", async (req: Request, res: any) => {
+    try {
+        const galleries = await Gallery.find().sort({ createdAt: -1 });
+        if (!galleries || galleries.length === 0) {
+            return res.status(404).json({ message: "No pictures found!" });
+        }
+        const galleriesWithSignedUrls = await Promise.all(
+            galleries.map(async (gallery) => {
+                let signedPictures: string[] = [];
+
+                try {
+
+                    if (gallery.pictures && gallery.pictures.length > 0) {
+                        signedPictures = await Promise.all(
+                            gallery.pictures.map((key: string) => generateSignedUrl(key))
+                        );
+                    }
+                } catch (err) {
+                    console.error(`Error generating signed URLs for room ${gallery._id}:`, err);
+                }
+
+                return {
+                    ...gallery.toObject(),
+                    pictures: signedPictures,
+                };
+            })
+        )
+        res.status(200).json(galleriesWithSignedUrls);
+    } catch (error: any) {
+        res.status(500).json({ message: error.message });
+    }
+});
 
 
 async function generateSignedUrl(coverImage?: string | null): Promise<string> {
