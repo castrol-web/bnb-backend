@@ -68,7 +68,7 @@ const upload = multer({ storage });
 const randomImageName = (bytes = 32) => crypto.randomBytes(bytes).toString("hex");
 
 // CREATE a room
-router.post('/create-room', authMiddleware, upload.fields([{ name: 'pictures', maxCount: 10 }, { name: 'frontViewPicture', maxCount: 1 }]), async (req: Request, res: any) => {
+router.post('/create-room', upload.fields([{ name: 'pictures', maxCount: 10 }, { name: 'frontViewPicture', maxCount: 1 }]), async (req: Request, res: any) => {
     try {
         const {
             title,
@@ -144,7 +144,7 @@ router.post('/create-room', authMiddleware, upload.fields([{ name: 'pictures', m
 
 
 // UPDATE a room
-router.put('/room/:id', authMiddleware, upload.fields([{ name: 'pictures', maxCount: 10 }, { name: 'frontViewPicture', maxCount: 1 },]),
+router.put('/room/:id', upload.fields([{ name: 'pictures', maxCount: 10 }, { name: 'frontViewPicture', maxCount: 1 },]),
     async (req: Request, res: any) => {
         try {
             const room = await Room.findById(req.params.id);
@@ -260,7 +260,7 @@ router.put('/room/:id', authMiddleware, upload.fields([{ name: 'pictures', maxCo
 
 
 // DELETE a room
-router.delete('/room/:id', authMiddleware, async (req: Request, res: any) => {
+router.delete('/room/:id', async (req: Request, res: any) => {
     try {
         const room = await Room.findById(req.params.id);
         if (!room) {
