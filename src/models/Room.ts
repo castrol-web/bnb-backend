@@ -10,7 +10,7 @@ const roomSchema = new mongoose.Schema({
     numberOfBeds: { type: Number, required: true },
     roomType: {
         type: String,
-        enum: ['Classic', 'Deluxe', 'Suite', 'Single', 'Double'],
+        enum: ['Tripple', 'Small Double', 'Twin', 'Single', 'Double','Family'],
         required: true,
     },
     pictures: [{ type: String , required: true}],
